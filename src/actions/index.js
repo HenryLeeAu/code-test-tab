@@ -31,6 +31,7 @@ export const updateLocation = ({ location }) => {
 
 export const fetchRacingList = () => {
   return (dispatch, getState) => {
+    console.log(`${baseApi}${getState().pageStatus.location}`)
     axios
       .get(`${baseApi}${getState().pageStatus.location}`)
       .then(res => {
