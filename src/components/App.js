@@ -1,27 +1,26 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { fetchRacingList } from 'actions';
+import Location from 'components/Location';
+import RacingList from 'components/RacingList';
+import RacingTypeFilter from 'components/RacingTypeFilter';
 class App extends Component {
-  componentDidMount() {
-    this.props.fetchRacingList();
-  }
   render() {
-    console.log(this.props.pageStatus.sorted_data);
-    const newArr = this.props.pageStatus.sorted_data.filter(item => {
-      return item.meeting.raceType === this.props.pageStatus.filter;
-    });
-    console.log(newArr);
-    return <div className="App">home</div>;
+    return (
+      <div className="App">
+        <nav className="nav">
+          <div className="content">
+          <Location />
+          </div>
+        </nav>
+        <div className="main content ">
+          <h1>Next To Go</h1>
+          <div>
+          <RacingTypeFilter />
+          </div>
+          <RacingList />
+        </div>
+      </div>
+    );
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    pageStatus: state.pageStatus,
-  };
-}
-
-export default connect(
-  mapStateToProps,
-  { fetchRacingList }
-)(App);
+export default App;

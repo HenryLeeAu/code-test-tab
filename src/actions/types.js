@@ -1,6 +1,7 @@
-export const INPUT_KEYWORD = 'INPUT_KEYWORD';
+
 
 export const GET_RACING_LIST = 'GET_RACING_LIST';
 
-export const GET_GENRE_LIST = 'GET_GENRE_LIST';
+export const UPDATE_RACING_TYPE = 'UPDATE_RACING_TYPE'
+export const UPDATE_LOCATION = 'UPDATE_LOCATION'
 

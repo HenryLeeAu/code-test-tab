@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "http-proxy-middleware": "^0.19.1",
     "json-server": "^0.14.0",
     "lodash": "^4.17.11",
     "moxios": "^0.4.0",
@@ -20,8 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "api":"json-server --watch db.json --port 4000"
-
+    "api": "json-server --watch db.json --port 4000"
   },
   "eslintConfig": {
     "extends": "react-app"

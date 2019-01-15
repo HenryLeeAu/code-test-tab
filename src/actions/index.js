@@ -1,7 +1,10 @@
-import { GET_RACING_LIST } from 'actions/types';
+import {
+  GET_RACING_LIST,
+  UPDATE_LOCATION,
+  UPDATE_RACING_TYPE,
+} from 'actions/types';
 import axios from 'axios';
 import { baseApi } from 'apis';
-import _ from 'lodash';
 
 export const getRacingList = data => {
   return {
@@ -10,7 +13,23 @@ export const getRacingList = data => {
   };
 };
 
-export const fetchRacingList = keyword => {
+export const updateRacingType = ({racingType}) => {
+  return {
+    type: UPDATE_RACING_TYPE,
+    payload: racingType,
+  };
+};
+export const updateLocation = ({ location }) => {
+  return dispatch => {
+    dispatch({
+      type: UPDATE_LOCATION,
+      payload: location,
+    });
+    return dispatch(fetchRacingList());
+  };
+};
+
+export const fetchRacingList = () => {
   return (dispatch, getState) => {
     axios
       .get(`${baseApi}${getState().pageStatus.location}`)
