@@ -13,7 +13,7 @@ export const getRacingList = data => {
   };
 };
 
-export const updateRacingType = ({racingType}) => {
+export const updateRacingType = ({ racingType }) => {
   return {
     type: UPDATE_RACING_TYPE,
     payload: racingType,
@@ -31,7 +31,7 @@ export const updateLocation = ({ location }) => {
 
 export const fetchRacingList = () => {
   return (dispatch, getState) => {
-    console.log(`${baseApi}${getState().pageStatus.location}`)
+    console.log(`${baseApi}${getState().pageStatus.location}`);
     axios
       .get(`${baseApi}${getState().pageStatus.location}`)
       .then(res => {

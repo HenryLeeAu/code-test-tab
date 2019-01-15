@@ -8,13 +8,13 @@ class App extends Component {
       <div className="App">
         <nav className="nav">
           <div className="content">
-          <Location />
+            <Location />
           </div>
         </nav>
         <div className="main content ">
           <h1>Next To Go</h1>
           <div>
-          <RacingTypeFilter />
+            <RacingTypeFilter />
           </div>
           <RacingList />
         </div>

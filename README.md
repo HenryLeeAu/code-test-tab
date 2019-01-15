@@ -1,14 +1,12 @@
-A code test for EdApp
+A code test for Tab
 
 ### `yarn install `
 Install this project
 
-### `yarn api`
-Runs fake movie json db<br>
-Open [http://localhost:4000/movies](http://localhost:4000/movies) to view movie db in the browser.
+
 ### `yarn start `
 Runs this project in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Please open [http://localhost:3000](http://localhost:3000) with latest version of Chrome, Firefox or Edge.
 
 
 ### `yarn test`

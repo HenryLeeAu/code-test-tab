@@ -30,7 +30,7 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "proxy": "https://api.beta.tab.com.au/",
+  
   "devDependencies": {
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
