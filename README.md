@@ -53,8 +53,8 @@ Please run node server.js and you can open url http://localhost:3001/api/v1/tab-
 
 
 ### Note
-1. This app didn't handle any error status.
-2. Use redux hanlde the status.
+1. This app didn't handle any error.
+2. Use redux hanlde the data status.
 3. In order to caculate time-to-go, my solution is to pass current time into each racing item. It can trigger componentDidUpdate in RacingListItem component and update the time difference.
 
 
