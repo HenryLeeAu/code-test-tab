@@ -10,7 +10,7 @@ Runs this project in the development mode.<br>
 Please open [http://localhost:3000](http://localhost:3000) with latest version of Chrome, Firefox or Edge.
 
 ### `yarn build`
-Ｇenerate files for the production environment. I have built up the necessary files in the /build folder.
+Generate files for the production environment. I have built up the necessary files in the /build folder.
 
 ### Proxy API
 In this project I am using http-proxy-middleware to proxy the origonal source. 
