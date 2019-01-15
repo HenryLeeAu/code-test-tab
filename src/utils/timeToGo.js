@@ -6,9 +6,9 @@ export default (curTime, eveTime) => {
     let dd = Math.floor((e - c) / 86400000);
     let dh = Math.floor(((e - c) % 86400000) / 3600000);
     let dm = Math.round((((e - c) % 86400000) % 3600000) / 60000);
-    let sd = dd >= 1 ? `${dd}D` : '';
-    let sh = dh > 1 ? `${dh}hours` : dh === 1 ? `${dh}hour` : '';
-    let sm = dm > 1 ? `${dm}minutes` : dm === 1 ? `${dm}minute` : '';
+    let sd = dd > 0 ? `${dd}D` : '';
+    let sh = dh > 0 ? `${dh}H` : '';
+    let sm = dm > 0 ? `${dm}M` : '';
     return `${sd} ${sh} ${sm}`;
   } else {
     return 'Finished';

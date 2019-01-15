@@ -10,7 +10,7 @@ Runs this project in the development mode.<br>
 Please open [http://localhost:3000](http://localhost:3000) with latest version of Chrome, Firefox or Edge.
 
 ### `yarn build`
-Build files for the production environment.
+Ｇenerate files for the production environment. I have built up the necessary files in the /build folder.
 
 ### Proxy API
 In this project I am using http-proxy-middleware to proxy api in the development environment. 
@@ -37,4 +37,10 @@ app.use(
   proxy('https://api.beta.tab.com.au/')
 );
 ```
+### Note
+1. This app didn't handle any error status.
+2. Use redux hanlde the status.
+3. In order to caculate time-to-go, my solution is to pass current time into each racing item. It can trigger componentDidUpdate in RacingListItem component and update the time difference.
+
+
 

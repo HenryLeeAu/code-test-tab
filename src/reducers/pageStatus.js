@@ -1,4 +1,8 @@
-import { GET_RACING_LIST,UPDATE_LOCATION,UPDATE_RACING_TYPE } from 'actions/types';
+import {
+  GET_RACING_LIST,
+  UPDATE_LOCATION,
+  UPDATE_RACING_TYPE,
+} from 'actions/types';
 
 export const defaultState = {
   sorted_data: [],
@@ -15,13 +19,14 @@ export default function(state = defaultState, action) {
     case UPDATE_LOCATION:
       return {
         ...state,
-        location:action.payload,
-      }
+        filter: 'R',
+        location: action.payload,
+      };
     case UPDATE_RACING_TYPE:
-     return {
-       ...state,
-       filter:action.payload,
-     }
+      return {
+        ...state,
+        filter: action.payload,
+      };
     default:
       return state;
   }
