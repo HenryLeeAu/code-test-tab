@@ -49,12 +49,12 @@ app.use(
 app.listen(3001)
 
 ```
-Please run node server.js and you can open url http://localhost:3001/api/v1/tab-info-service/racing/next-to-go/races?jurisdiction=NSW to see the data.
+Please run node server.js in the command line and you can open url http://localhost:3001/api/v1/tab-info-service/racing/next-to-go/races?jurisdiction=NSW to see the data.
 
 
 ### Note
 1. This app didn't handle any error.
-2. Use redux hanlde the data status.
+2. Use redux to manage the data status.
 3. In order to caculate time-to-go, my solution is to pass current time into each racing item. It can trigger componentDidUpdate in RacingListItem component and update the time difference.
 
 
