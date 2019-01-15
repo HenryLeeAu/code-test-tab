@@ -13,7 +13,9 @@ Please open [http://localhost:3000](http://localhost:3000) with latest version o
 Ｇenerate files for the production environment. I have built up the necessary files in the /build folder.
 
 ### Proxy API
-In this project I am using http-proxy-middleware to proxy api in the development environment. 
+In this project I am using http-proxy-middleware to proxy the origonal source. 
+
+In my setupProxy.js file
 ```sh
 app.use(
     proxy('/api', {
@@ -29,6 +31,7 @@ app.use(
 When we setup the express server to serve our static files, we can do something like this example.
 The app will proxy the origional api when match the path '/api'.
 
+In my server.js file
 ```sh
 var express = require('express')
 var proxy = require('http-proxy-middleware')
