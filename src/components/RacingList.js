@@ -15,6 +15,10 @@ class RacingList extends Component {
       });
     }, 60000);
   }
+  componentWillUnmount(){
+    clearInterval(this.interval);
+    
+  }
   render() {
     const filteredList = this.props.pageStatus.sorted_data.filter(item => {
       return item.meeting.raceType === this.props.pageStatus.filter;
