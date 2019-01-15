@@ -27,16 +27,28 @@ app.use(
 ```
 
 When we setup the express server to serve our static files, we can do something like this example.
-The app will proxy the origional api when match the path '/api' .
-
-* It is just a generic example.
+The app will proxy the origional api when match the path '/api'.
 
 ```sh
+var express = require('express')
+var proxy = require('http-proxy-middleware')
+
+var app = express();
 app.use(
-  '/api',
-  proxy('https://api.beta.tab.com.au/')
+  proxy('/api', {
+    target: 'https://api.beta.tab.com.au/',
+    changeOrigin: true,
+    pathRewrite: {
+      '^/api': '',
+    },
+  })
 );
+app.listen(3001)
+
 ```
+Please run node server.js and you can open url http://localhost:3001/api/v1/tab-info-service/racing/next-to-go/races?jurisdiction=NSW to see the data.
+
+
 ### Note
 1. This app didn't handle any error status.
 2. Use redux hanlde the status.
