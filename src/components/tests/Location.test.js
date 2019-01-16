@@ -12,9 +12,15 @@ describe('Location', () => {
   beforeEach(() => {
     wrappered = shallow(<Location {...props} />);
   });
-  it('render 2 buttons ', () => {
+  it('render 2 buttons and find class = clicked on tab1', () => {
     expect(wrappered).toMatchSnapshot();
     expect(wrappered.find('button').length).toBe(2);
+    expect(
+      wrappered
+        .find('button')
+        .at(0)
+        .hasClass('clicked')
+    ).toBeTruthy();
   });
   
   
