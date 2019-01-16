@@ -5,7 +5,7 @@ exports[`RacingList render 2 items 1`] = `
   className="list"
 >
   <_default
-    currentTime="1547616206953"
+    currentTime="2019-01-16T23:02:09.858Z"
     key="0HATRICK RACE 15"
     raceItem={
       Object {
@@ -22,7 +22,7 @@ exports[`RacingList render 2 items 1`] = `
     }
   />
   <_default
-    currentTime="1547616206953"
+    currentTime="2019-01-16T23:02:09.858Z"
     key="1HATRICK RACE 15"
     raceItem={
       Object {

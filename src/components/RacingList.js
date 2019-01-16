@@ -4,14 +4,15 @@ import { connect } from 'react-redux';
 import { fetchRacingList } from 'actions';
 export class RacingList extends PureComponent {
   state = {
-    currentTime: new Date().getTime(),
+    currentTime: new Date(),
   };
  
   componentDidMount() {
     this.props.fetchRacingList({location:'NSW'});
     this.interval = setInterval(() => {
+     
       this.setState({
-        currentTime: new Date().getTime(),
+        currentTime: new Date(),
       });
     }, 60000);
   }

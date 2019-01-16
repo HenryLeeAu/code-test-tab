@@ -39,7 +39,7 @@ describe('RacingList', () => {
     wrappered = shallow(<RacingList {...props}  />);
     //setup a fake currentTime 
     //to avoid tests keep getting new time to rerender the snapshots 
-    wrappered.setState({ currentTime: '1547616206953' });
+    wrappered.setState({ currentTime: '2019-01-16T23:02:09.858Z' });
     wrappered.update();
     expect(wrappered).toMatchSnapshot();
     expect(wrappered.find(RacingListItem).length).toBe(2);
@@ -59,6 +59,8 @@ describe('RacingList', () => {
     expect(wrappered).toMatchSnapshot();
     expect(wrappered.find(RacingListItem).length).toBe(0);
   });
+
+ 
   
  
 });
