@@ -37,7 +37,8 @@ describe('RacingList', () => {
     };
     
     wrappered = shallow(<RacingList {...props}  />);
-    //setup a fake currentTime in case tests keep getting new time to rerender the snapshots 
+    //setup a fake currentTime 
+    //to avoid tests keep getting new time to rerender the snapshots 
     wrappered.setState({ currentTime: '1547616206953' });
     wrappered.update();
     expect(wrappered).toMatchSnapshot();
