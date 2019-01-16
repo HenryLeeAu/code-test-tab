@@ -6,8 +6,13 @@ Install this project
 
 ### `yarn start`
 
-Runs this project in the development mode.<br>
+Run this project in the development mode.<br>
 Please open [http://localhost:3000](http://localhost:3000) with latest version of Chrome, Firefox or Edge.
+
+
+### `yarn test`
+Run unit tests.
+
 
 ### `yarn build`
 Generate files for the production environment. I have built up the necessary files in the /build folder.

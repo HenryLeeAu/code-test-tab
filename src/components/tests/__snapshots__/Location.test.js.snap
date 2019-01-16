@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Location render 2 buttons  1`] = `
+<ul
+  className="tab location"
+>
+  <li
+    key="NSW"
+  >
+    <button
+      className="clicked"
+      onClick={[Function]}
+    >
+      NSW
+    </button>
+  </li>
+  <li
+    key="VIC"
+  >
+    <button
+      className=""
+      onClick={[Function]}
+    >
+      VIC
+    </button>
+  </li>
+</ul>
+`;

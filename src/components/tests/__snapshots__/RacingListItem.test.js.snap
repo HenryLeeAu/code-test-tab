@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RacingListItem render UI  1`] = `
+<li>
+  <button>
+    <div
+      className="raceNumber"
+    >
+      <strong>
+        R
+      </strong>
+    </div>
+    <div>
+      <h2
+        className="raceName"
+      >
+        HATRICK RACE 15
+      </h2>
+    </div>
+    <div>
+        1M
+    </div>
+    <div
+      className="meetingName"
+    >
+      NEW ZEALAND
+      (
+      NZL
+      )
+    </div>
+    <div
+      className="meetingDate"
+    >
+      2019-01-16
+    </div>
+  </button>
+</li>
+`;

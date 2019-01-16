@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { updateLocation } from 'actions';
-class Location extends Component {
+export class Location extends Component {
   componentDidMount() {}
   handleClick(location) {
     this.props.updateLocation({ location });

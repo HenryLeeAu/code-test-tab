@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import RacingListItem from 'components/RacingListItem';
 import { connect } from 'react-redux';
 import { fetchRacingList } from 'actions';
-class RacingList extends Component {
+export class RacingList extends Component {
   state = {
     currentTime: new Date().getTime(),
   };
@@ -15,6 +15,7 @@ class RacingList extends Component {
       });
     }, 60000);
   }
+
   componentWillUnmount(){
     clearInterval(this.interval);
     
@@ -38,7 +39,7 @@ class RacingList extends Component {
         </ul>
       );
     } else {
-      return <div>Noresult</div>;
+      return <div id="noresult">Noresult</div>;
     }
   }
 }

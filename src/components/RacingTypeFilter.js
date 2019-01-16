@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { updateRacingType } from 'actions';
-class RaceTypeFilter extends Component {
+export class RaceTypeFilter extends Component {
   componentDidMount() {}
   handleClick(racingType) {
     this.props.updateRacingType({ racingType });

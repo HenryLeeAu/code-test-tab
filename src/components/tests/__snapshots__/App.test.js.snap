@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App render UI  1`] = `
+<div
+  className="App"
+>
+  <nav
+    className="nav"
+  >
+    <div
+      className="content"
+    >
+      <Connect(Location) />
+    </div>
+  </nav>
+  <div
+    className="main content "
+  >
+    <h1>
+      Next To Go
+    </h1>
+    <div>
+      <Connect(RaceTypeFilter) />
+    </div>
+    <Connect(RacingList) />
+  </div>
+</div>
+`;

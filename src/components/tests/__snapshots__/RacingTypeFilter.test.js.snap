@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Location render 3 buttons 1`] = `
+<ul
+  className="tab type"
+>
+  <li
+    key="Thoroughbred"
+  >
+    <button
+      className="clicked"
+      onClick={[Function]}
+    >
+      Thoroughbred
+    </button>
+  </li>
+  <li
+    key="Greyhounds"
+  >
+    <button
+      className=""
+      onClick={[Function]}
+    >
+      Greyhounds
+    </button>
+  </li>
+  <li
+    key="Harness"
+  >
+    <button
+      className=""
+      onClick={[Function]}
+    >
+      Harness
+    </button>
+  </li>
+</ul>
+`;

@@ -36,6 +36,7 @@ export const fetchRacingList = () => {
       .get(`${baseApi}${getState().pageStatus.location}`)
       .then(res => {
         const newArr = res.data.races.sort(function(a, b) {
+          console.log(a.raceStartTime)
           return new Date(a.raceStartTime) - new Date(b.raceStartTime);
         });
         return dispatch(getRacingList(newArr));

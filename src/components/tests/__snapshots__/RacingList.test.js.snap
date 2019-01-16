@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RacingList render 2 items 1`] = `
+<ul
+  className="list"
+>
+  <_default
+    currentTime="1547616206953"
+    key="0HATRICK RACE 15"
+    raceItem={
+      Object {
+        "meeting": Object {
+          "location": "NZL",
+          "meetingDate": "2019-01-16",
+          "meetingName": "NEW ZEALAND",
+          "raceType": "G",
+        },
+        "raceName": "HATRICK RACE 15",
+        "raceNumbe": 5,
+        "raceStartTime": "2019-01-16T03:29:00.000Z",
+      }
+    }
+  />
+  <_default
+    currentTime="1547616206953"
+    key="1HATRICK RACE 15"
+    raceItem={
+      Object {
+        "meeting": Object {
+          "location": "NZL",
+          "meetingDate": "2019-01-16",
+          "meetingName": "Australia",
+          "raceType": "G",
+        },
+        "raceName": "HATRICK RACE 15",
+        "raceNumbe": 5,
+        "raceStartTime": "2019-01-16T03:30:00.000Z",
+      }
+    }
+  />
+</ul>
+`;
+
+exports[`RacingList render noresult 1`] = `
+<div
+  id="noresult"
+>
+  Noresult
+</div>
+`;
