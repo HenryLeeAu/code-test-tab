@@ -12,7 +12,7 @@ describe('Location', () => {
   beforeEach(() => {
     wrappered = shallow(<RaceTypeFilter {...props} />);
   });
-  it('render 3 buttons', () => {
+  it('render 3 buttons and find class = clicked on tab1', () => {
     expect(wrappered).toMatchSnapshot();
     expect(wrappered.find('button').length).toBe(3);
     expect(

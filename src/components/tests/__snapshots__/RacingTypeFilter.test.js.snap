@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Location render 3 buttons 1`] = `
+exports[`Location render 3 buttons and find class = clicked on tab1 1`] = `
 <ul
   className="tab type"
 >
