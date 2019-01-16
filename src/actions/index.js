@@ -27,7 +27,6 @@ export const updateLocation = ({ location }) => {
 };
 
 export const fetchRacingList = ({ location }) => {
-  console.log(location);
   return dispatch => {
     axios
       .get(`${baseApi}${location}`)
