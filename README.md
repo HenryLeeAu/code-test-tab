@@ -62,5 +62,7 @@ Please run node server.js in the command line and you can open url http://localh
 2. Use redux to manage the data status.
 3. In order to caculate time-to-go, my solution is to pass current time into each racing item. It can trigger componentDidUpdate in RacingListItem component and update the time difference.
 
+1. In my unit tests, I mock current time to avoid tests keep getting new time to rerender the snapshots.
+
 
 
