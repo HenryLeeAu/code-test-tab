@@ -21,10 +21,12 @@ export const updateRacingType = ({ racingType }) => {
 };
 export const updateLocation = ({ location }) => {
   return dispatch => {
+   
     dispatch({
       type: UPDATE_LOCATION,
       payload: location,
     });
+ 
     return dispatch(fetchRacingList());
   };
 };

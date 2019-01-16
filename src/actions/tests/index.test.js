@@ -4,12 +4,16 @@ import {
   updateLocation,
   fetchRacingList,
 } from 'actions';
+import {
+  GET_RACING_LIST,
+  UPDATE_LOCATION,
+  UPDATE_RACING_TYPE,
+} from 'actions/types';
 import moxios from 'moxios';
 import { baseApi } from 'apis';
 
 describe('Action ', () => {
   let dispatch;
-
   const resData = [
     {
       raceStartTime: '2019-01-16T04:10:00.000Z',
