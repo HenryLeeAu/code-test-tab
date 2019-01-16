@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { updateLocation } from 'actions';
+import { updateLocation,fetchRacingList } from 'actions';
 export class Location extends Component {
   componentDidMount() {}
   handleClick(location) {
     this.props.updateLocation({ location });
+    this.props.fetchRacingList({ location })
   }
   render() {
     const arr = ['NSW', 'VIC'];
@@ -37,5 +38,5 @@ function mapStateToProps(state) {
 
 export default connect(
   mapStateToProps,
-  { updateLocation }
+  { updateLocation,fetchRacingList }
 )(Location);

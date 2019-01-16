@@ -44,7 +44,9 @@ describe('Action ', () => {
         },
       };
     };
-    await fetchRacingList()(dispatch, getState);
+    await fetchRacingList({
+      location: 'NSW',
+    })(dispatch, getState);
     moxios.wait(() => {
       const sortedArr = [
         {

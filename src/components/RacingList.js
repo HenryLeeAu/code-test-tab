@@ -8,7 +8,7 @@ export class RacingList extends Component {
   };
  
   componentDidMount() {
-    this.props.fetchRacingList();
+    this.props.fetchRacingList({location:'NSW'});
     this.interval = setInterval(() => {
       this.setState({
         currentTime: new Date().getTime(),

@@ -20,25 +20,19 @@ export const updateRacingType = ({ racingType }) => {
   };
 };
 export const updateLocation = ({ location }) => {
-  return dispatch => {
-   
-    dispatch({
-      type: UPDATE_LOCATION,
-      payload: location,
-    });
- 
-    return dispatch(fetchRacingList());
+  return {
+    type: UPDATE_LOCATION,
+    payload: location,
   };
 };
 
-export const fetchRacingList = () => {
-  return (dispatch, getState) => {
-    console.log(`${baseApi}${getState().pageStatus.location}`);
+export const fetchRacingList = ({ location }) => {
+  console.log(location);
+  return dispatch => {
     axios
-      .get(`${baseApi}${getState().pageStatus.location}`)
+      .get(`${baseApi}${location}`)
       .then(res => {
         const newArr = res.data.races.sort(function(a, b) {
-          console.log(a.raceStartTime)
           return new Date(a.raceStartTime) - new Date(b.raceStartTime);
         });
         return dispatch(getRacingList(newArr));

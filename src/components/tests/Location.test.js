@@ -4,6 +4,7 @@ import { shallow } from 'enzyme';
 let wrappered;
 const props = {
   updateLocation:jest.fn(),
+  fetchRacingList:jest.fn(),
   pageStatus: {
     location: 'NSW',
   },
@@ -31,6 +32,9 @@ describe('Location', () => {
       .simulate('click');
     wrappered.update();
     expect(props.updateLocation).toBeCalledWith({
+      'location':'NSW'
+    });
+    expect(props.fetchRacingList).toBeCalledWith({
       'location':'NSW'
     });
 
