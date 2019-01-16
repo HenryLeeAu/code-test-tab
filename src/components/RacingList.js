@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import RacingListItem from 'components/RacingListItem';
 import { connect } from 'react-redux';
 import { fetchRacingList } from 'actions';
-export class RacingList extends Component {
+export class RacingList extends PureComponent {
   state = {
     currentTime: new Date().getTime(),
   };

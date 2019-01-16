@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import Location from 'components/Location';
 import RacingList from 'components/RacingList';
 import RacingTypeFilter from 'components/RacingTypeFilter';
-class App extends Component {
+class App extends PureComponent {
   render() {
     return (
       <div className="App">

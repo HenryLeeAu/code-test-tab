@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { updateLocation,fetchRacingList } from 'actions';
-export class Location extends Component {
+export class Location extends PureComponent {
   componentDidMount() {}
   handleClick(location) {
     this.props.updateLocation({ location });
