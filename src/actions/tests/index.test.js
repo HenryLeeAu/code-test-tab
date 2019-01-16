@@ -14,7 +14,7 @@ import { baseApi } from 'apis';
 
 describe('Action ', () => {
   it('fetchRacingList with sorted order', async done => {
-    let dispatch;
+    const dispatch = jest.fn();
     const resData = [
       {
         raceStartTime: '2019-01-16T04:10:00.000Z',
@@ -23,7 +23,6 @@ describe('Action ', () => {
         raceStartTime: '2019-01-16T04:07:00.000Z',
       },
     ];
-    dispatch = jest.fn();
     moxios.install();
     moxios.stubRequest(`${baseApi}NSW`, {
       status: 200,
