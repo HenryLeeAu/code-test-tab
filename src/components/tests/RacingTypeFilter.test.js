@@ -23,7 +23,7 @@ describe('Location', () => {
     ).toBeTruthy();
   });
 
-  it('click Greyhounds tab to send the action', () => {
+  it('click tab2 to send the action', () => {
     wrappered
       .find('button')
       .at(1)

@@ -1,3 +1,7 @@
+import thunk from 'redux-thunk';
+import configureMockStore from 'redux-mock-store';
+import moxios from 'moxios';
+import { baseApi } from 'apis';
 import {
   getRacingList,
   updateRacingType,
@@ -9,40 +13,40 @@ import {
   UPDATE_LOCATION,
   UPDATE_RACING_TYPE,
 } from 'actions/types';
-import moxios from 'moxios';
-import { baseApi } from 'apis';
+
+
 
 describe('Action ', () => {
   it('fetchRacingList with sorted order', async done => {
-    const dispatch = jest.fn();
-    const resData = [
+    const middlewares = [thunk];
+    const mockStore = configureMockStore(middlewares);
+    const store = mockStore({ sorted_data: [] });
+
+    const expectedActions = [
       {
-        raceStartTime: '2019-01-16T04:10:00.000Z',
-      },
-      {
-        raceStartTime: '2019-01-16T04:07:00.000Z',
+        type: GET_RACING_LIST,
+        payload: [
+          { raceStartTime: '2019-01-16T04:07:00.000Z' },
+          { raceStartTime: '2019-01-16T04:10:00.000Z' },
+        ],
       },
     ];
     moxios.install();
     moxios.stubRequest(`${baseApi}NSW`, {
       status: 200,
       response: {
-        races: [...resData],
-      },
-    });
-    await fetchRacingList({
-      location: 'NSW',
-    })(dispatch);
-    moxios.wait(() => {
-      const sortedArr = [
-        {
-          raceStartTime: '2019-01-16T04:07:00.000Z',
-        },
-        {
+        races: [{
           raceStartTime: '2019-01-16T04:10:00.000Z',
         },
-      ];
-      expect(dispatch).toBeCalledWith(getRacingList(sortedArr));
+        {
+          raceStartTime: '2019-01-16T04:07:00.000Z',
+        }],
+      },
+    });
+
+    await store.dispatch(fetchRacingList({ location: 'NSW' }));
+    moxios.wait(() => {
+      expect(store.getActions()).toEqual(expectedActions);
       done();
     });
     moxios.uninstall();

@@ -28,7 +28,7 @@ export const updateLocation = ({ location }) => {
 
 export const fetchRacingList = ({ location }) => {
   return dispatch => {
-    axios
+    return axios
       .get(`${baseApi}${location}`)
       .then(res => {
         const newArr = res.data.races.sort(function(a, b) {
